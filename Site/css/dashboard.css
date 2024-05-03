@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --azul-primario: #2694bf;
+  --azul-claro: #32bad9;
+  --azul-ceu: #2182bf;
+  --azul-escuro: #287696;
+  --azul-titulo: #2a5276;
+  --azul-marinho: #001d6c;
+  --cinza-basico: #dde1e6;
+  --cinza-subtitulo: #21272a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Grid */
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 80px 80px repeat(3, 1fr);
+  grid-column-gap: 16px;
+
+  width: 100%;
+  height: 100vh;
+}
+
+/* Container padrão */
+.container {
+  background-color: var(--cinza-basico);
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* barra de navegação lateral */
+.aside {
+  grid-area: 2 / 1 / 6 / 2;
+  background-color: var(--azul-primario);
+  box-shadow: 6px 16px 51px -33px rgba(0, 0, 0, 0.75);
+
+  overflow: auto;
+}
+
+.aside::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+}
+
+.aside::-webkit-scrollbar-thumb {
+  background-color: var(--azul-claro);
+}
+
+.aside::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.usuario_container {
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+  margin: 20px;
+}
+
+.usuario_foto {
+  width: 50px;
+  height: 50px;
+
+  background-color: var(--cinza-basico);
+  border-radius: 100%;
+}
+
+.usuario_container h5 {
+  padding-left: 20px;
+
+  font-size: 18px;
+}
+
+.aside h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.aside ul {
+  display: flex;
+  flex-direction: column;
+
+  list-style-type: none;
+  padding: 0;
+}
+
+.aside li {
+  margin-bottom: 20px;
+  background-color: var(--cinza-basico);
+
+  width: 80%;
+  height: 50px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+
+  display: flex;
+  align-items: center;
+
+  box-shadow: 6px 16px 29px -19px rgba(0, 0, 0, 0.37);
+}
+
+.aside a {
+  text-decoration: none;
+  color: var(--azul-primario);
+  transition: color 0.3s ease;
+}
+
+.aside a:hover {
+  color: var(--azul-marinho);
+}
+
+/* Cabeçalho */
+.cabecalho {
+  grid-area: 1 / 1 / 2 / 6;
+
+  margin-right: 10px;
+
+  column-gap: 0px;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  border-bottom: 1px solid var(--cinza-basico);
+}
+
+/* Navegação */
+.navbar {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  color: black;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar li::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: var(--azul-primario);
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar li:hover::after {
+  width: 100%;
+
+}
+
+/* KPI's */
+.container_temperatura {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.container_umidade {
+  grid-area: 3 / 3 / 4 / 4;
+}
+
+.container_proximidade {
+  grid-area: 3 / 4 / 4 / 5;
+}
+
+.container_alerta {
+  grid-area: 3 / 5 / 4 / 6;
+  margin-right: 10px;
+}
+
+.container_metricas {
+  grid-area: 2/2/3/6;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+
+
+#alerta_temperatura_baixa {
+  background-color: #42A5F5;
+  width: 15%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px 0 0 4px;
+}
+
+#alerta_temperatura_ideal {
+  background-color: #9CCC65;
+  width: 15%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#alerta_temperatura_alta {
+  background-color: #FF7043;
+  width: 15%;
+  height: 60%;
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 4px 4px 0;
+}
+
+#alerta_umidade_baixa{
+  background-color: #A1B9CC;
+  width: 15%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px 0 0 4px;
+}
+
+#alerta_umidade_ideal {
+background-color: #9CCC65;
+width: 15%;
+height: 60%;
+display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#alerta_umidade_alta{
+  background-color: #0062FF;
+  width: 15%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 4px 4px 0;
+}
+
+.container_alerta>p,
+.container_proximidade>p {
+  font-size: 25px;
+}
+
+.container_temperatura,
+.container_umidade,
+.container_proximidade,
+.container_alerta {
+  margin-top: 20px;
+  box-shadow: 6px 16px 29px -22px rgba(0, 0, 0, 0.23);
+}
+
+/* KPI's Textos */
+.titulo_container {
+  font-size: 25px;
+}
+
+.paragrafo_container {
+  font-family: Arial, sans-serif;
+  font-size: 48px;
+
+  padding: 20px;
+}
+
+/* Graficos de temperatura e umidade */
+
+.container_grafico-temperatura {
+  grid-area: 4 / 2 / 6 / 4;
+}
+
+.container_grafico-umidade {
+  grid-area: 4 / 4 / 6 / 6;
+  margin-right: 10px;
+}
+
+.container_grafico-temperatura,
+.container_grafico-umidade {
+  margin-top: 35px;
+}

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div class="grid_container">
+    <aside class="aside">
+      <div class="usuario_container">
+        <div class="usuario_foto"></div>
+        <h5>Olá (usuário)</h5>
+      </div>
+      <ul>
+        <li><img src="img/cama.svg" /><a href="#" style="color: #001D6C">Quarto N° 125</a></li>
+      </ul>
+      <ul>
+        <li><img src="img/cama.svg" /><a href="./pages/quarto126.html">Quarto N° 126</a></li>
+      </ul>
+      <ul>
+        <li><img src="img/cama.svg" /><a href="./pages/quarto127.html">Quarto N° 127</a></li>
+      </ul>
+    </aside>
+    <header class="cabecalho">
+      <ul class="navbar">
+         <li>Inicial</li>
+        <li>Simulador</li>
+      </ul>
+      <img src="img/logo.svg" />
+      <ul class="navbar">
+        <li>Sobre nós</li>
+        <li>Fale conosco</li>
+      </ul>
+    </header>
+
+    <div class="container_metricas">
+
+      <!-- <div class="container-metricas-temperaturas"> -->
+        <div id="alerta_temperatura_baixa">
+          <span>Abaixo 15Cº</span>
+        </div>
+        <div id="alerta_temperatura_ideal">
+          <span>Acima 23Cº até 25Cº</span>
+        </div>
+        <div id="alerta_temperatura_alta">
+          <span>Acima de 25Cº</span>
+        </div>
+      <!-- </div> -->
+
+      <!-- <div class="container-metricas-umidades"> -->
+        <div id="alerta_umidade_baixa">
+          <span>Abaixo de 30%</span>
+        </div>
+        <div id="alerta_umidade_ideal">
+          <span>Acima de 30% até 60%</span>
+        </div>
+        <div id="alerta_umidade_alta">
+          <span>Acima de 60%</span>
+        </div>
+      <!-- </div> -->
+    </div>
+
+    <div class="container_temperatura container">
+      <h3 class="titulo_container">Temperatura</h3>
+      <p class="paragrafo_container">23°C</p>
+      <span id="status-message">Temperatura Normal</span>
+    </div>
+
+    <div class="container_umidade container">
+      <h3 class="titulo_container">Umidade</h3>
+      <p class="paragrafo_container">65%</p>
+      <span id="status-message">Umidade Normal</span>
+    </div>
+
+    <div class="container_proximidade container">
+      <h3 class="titulo_container">Proximidade</h3>
+      <p class="paragrafo_container">Aberto</p>
+      <span id="status-message">Janela Aberta</span>
+    </div>
+
+    <div class="container_alerta container">
+      <h3 class="titulo_container">Alerta</h3>
+      <p class="paragrafo_container">Sem alertas</p>
+      <span id="status-message">-</span>
+    </div>
+
+    <div class="container_grafico-temperatura">
+      <canvas id="graficoTemperatura"></canvas>
+    </div>
+
+    <div class="container_grafico-umidade">
+      <canvas id="graficoUmidade"></canvas>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script src="js/script.js"></script>
+<script src="js/graficos.js"></script>
