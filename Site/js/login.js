@@ -1,6 +1,6 @@
 function cadastro() {
 
-    // criando variáveispara receber os valores das inputs
+    // criando variáveis para receber os valores das inputs
     const nome = document.getElementById('input_nome').value;
     const email = document.getElementById('cadastro_input_email').value;
     const senha = document.getElementById('cadastro_input_senha').value;

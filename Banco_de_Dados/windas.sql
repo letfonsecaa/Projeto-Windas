@@ -6,22 +6,17 @@ USE windas;
 CREATE TABLE hotel (
   idHotel INT AUTO_INCREMENT,
   nomeHotel VARCHAR(100) NOT NULL,
-  cnpj CHAR(18) NOT NULL,
-  usuarioHotel VARCHAR(50) NOT NULL, 
   emailHotel VARCHAR(100) NOT NULL,
   senha VARCHAR(20) NOT NULL,
   PRIMARY KEY (idHotel),
   UNIQUE (nomeHotel),
-  UNIQUE (usuarioHotel),
-  UNIQUE (emailHotel),
-  UNIQUE (cnpj)
+  UNIQUE (emailHotel)
 );
 
 CREATE TABLE funcionario (
 idFuncionario INT PRIMARY KEY AUTO_INCREMENT,
 fk_gerente INT,
-nomeFuncionario VARCHAR(50) NOT NULL,
-usuarioFuncionario VARCHAR(50) NOT NULL, 
+nomeFuncionario VARCHAR(50) NOT NULL, 
 emailFuncionario VARCHAR(100) NOT NULL,
 senha VARCHAR(20) NOT NULL,
 fk_hotel INT,
@@ -61,22 +56,22 @@ CREATE TABLE leitura (
 
 
 
-INSERT INTO hotel (nomeHotel, cnpj, usuarioHotel, emailHotel, senha)
+INSERT INTO hotel (nomeHotel, cnpj, emailHotel, senha)
 VALUES 
-    ('Ibis São Paulo', '12.345.678/0001-90','hotel_ibis_sp', 'ibissp@gmail.com','123@IbiS'),
-    ('Gran Villagio Hotel', '98.765.432/0001-21','hotel_gran','granvillagio@gmail.com','GranV56!789'),
-    ('Hotel Plaza', '11.223.344/0001-55','hotel_plaza', 'hotelplaza@hotmail.com', '3456Plaz%0');
+    ('Ibis São Paulo', '12.345.678/0001-90', 'ibissp@gmail.com','123@IbiS'),
+    ('Gran Villagio Hotel', '98.765.432/0001-21','granvillagio@gmail.com','GranV56!789'),
+    ('Hotel Plaza', '11.223.344/0001-55', 'hotelplaza@hotmail.com', '3456Plaz%0');
 
 
-INSERT INTO funcionario (fk_gerente, nomeFuncionario, usuarioFuncionario, emailFuncionario, senha, fk_hotel)
-VALUES (null,'Fernanda Menezes','fer_menezes','fernandamenezes@gmail.com','1258#f&r', 1),
-       (1,'Bruno Antunes','bruno.antunes','brunoantunes@gmail.com','8596%AnT',1),
-       (1,'Maria Santos','maria.s','mariasantos@gmail.com','$4253Sn',1),
-       (null,'Pedro Oliveira','pedro.oliveira','pedrooliveira@gmail.com','*12$Pd', 2),
-       (4,'Ana Lima','ana.lima','analima@gmail.com','&9@34AL',2),
-       (null,'Ricardo Silva','ricardo_silva','ricardosilva@gmail.com','@3Ric#',3),
-       (6,'Camila Pereira','camila.p','camilapereira@gmail.com','CaMi$%',3),
-       (6,'Carlos Vieira','carlos_vieira','carlosvieira@gmail.com','^76&CV',3);
+INSERT INTO funcionario (fk_gerente, nomeFuncionario, emailFuncionario, senha, fk_hotel)
+VALUES (null,'Fernanda Menezes','fernandamenezes@gmail.com','1258#f&r', 1),
+       (1,'Bruno Antunes','brunoantunes@gmail.com','8596%AnT',1),
+       (1,'Maria Santos','mariasantos@gmail.com','$4253Sn',1),
+       (null,'Pedro Oliveira','pedrooliveira@gmail.com','*12$Pd', 2),
+       (4,'Ana Lima','analima@gmail.com','&9@34AL',2),
+       (null,'Ricardo Silva','ricardosilva@gmail.com','@3Ric#',3),
+       (6,'Camila Pereira','camilapereira@gmail.com','CaMi$%',3),
+       (6,'Carlos Vieira','carlosvieira@gmail.com','^76&CV',3);
        
        
 
