@@ -105,7 +105,7 @@ body {
   margin-bottom: 20px;
   background-color: var(--cinza-basico);
 
-  width: 80%;
+  width: 85%;
   height: 50px;
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
@@ -191,22 +191,63 @@ body {
   margin-right: 10px;
 }
 
+.titulos_metricas {
+  grid-area: 2 / 2 / 2 / 6;
+
+  display: flex;
+  justify-content: center;
+  column-gap: 500px;
+  width: 95%;
+  font-weight: 500;
+}
+
+.titulos_metricas #temperatura {
+  padding-left: 50px;
+}
+
+.titulos_metricas #umidade {
+  padding-left: 20px;
+}
+
 .container_metricas {
   grid-area: 2/2/3/6;
-  margin-right: 10px;
+  padding-left: 40px;
+  padding-right: 50px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   justify-content: center;
   text-align: center;
-  
+
+  width: 100%;
 }
 
+.container-metricas-temperaturas {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  position: relative;
+  top: 30px;
 
+  width: 50%;
+  height: 100%;
+}
+
+.container-metricas-umidades {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  position: relative;
+  top: 30px;
+
+  width: 50%;
+  height: 100%;
+}
 
 #alerta_temperatura_baixa {
-  background-color: #42A5F5;
-  width: 15%;
+  background-color: #3fbbec;
+  width: 50%;
   height: 60%;
   display: flex;
   align-items: center;
@@ -216,7 +257,7 @@ body {
 
 #alerta_temperatura_ideal {
   background-color: #9CCC65;
-  width: 15%;
+  width: 50%;
   height: 60%;
   display: flex;
   align-items: center;
@@ -225,7 +266,7 @@ body {
 
 #alerta_temperatura_alta {
   background-color: #FF7043;
-  width: 15%;
+  width: 50%;
   height: 60%;
   margin-right: 40px;
   display: flex;
@@ -236,7 +277,7 @@ body {
 
 #alerta_umidade_baixa{
   background-color: #A1B9CC;
-  width: 15%;
+  width: 50%;
   height: 60%;
   display: flex;
   align-items: center;
@@ -246,7 +287,7 @@ body {
 
 #alerta_umidade_ideal {
 background-color: #9CCC65;
-width: 15%;
+width: 50%;
 height: 60%;
 display: flex;
   align-items: center;
@@ -254,14 +295,39 @@ display: flex;
 }
 
 #alerta_umidade_alta{
-  background-color: #0062FF;
-  width: 15%;
+  background-color: rgb(255, 0, 0);
+  width: 50%;
   height: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 0 4px 4px 0;
 }
+
+.bgColorTemp{
+  background-color: #FF7043;
+}
+
+.bgColorUmi{
+  background-color: #A1B9CC;
+}
+
+.bgColorUmiQ126{
+  background-color: #9CCC65;
+}
+
+.bgColorTempQ126{
+  background-color: #9CCC65 ;
+}
+
+.bgColorTempQ125{
+  background-color: #9CCC65;
+}
+
+.bgColorUmiQ125{
+  background-color: #9CCC65;
+}
+
 
 .container_alerta>p,
 .container_proximidade>p {

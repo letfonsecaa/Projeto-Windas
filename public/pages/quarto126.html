@@ -26,15 +26,14 @@
         <ul>
           <li>
             <img src="../img/cama.svg" /><a href="#" style="color: #001d6c"
-              >Quarto N° 126</a
-            >
+              >Quarto N° 126 </a>
           </li>
         </ul>
         <ul>
           <li>
             <img src="../img/cama.svg" /><a href="./quarto127.html"
               >Quarto N° 127</a
-            >
+            > <span class="alert-icon" style=" padding-left: 30px; font-size: 35px;">⚠️</span>
           </li>
         </ul>
       </aside>
@@ -50,8 +49,13 @@
         </ul>
       </header>
 
+      <div class="titulos_metricas">
+        <span id="temperatura">Temperatura</span>
+        <span id="Umidade">Umidade</span>
+      </div>
+
       <div class="container_metricas">
-        <!-- <div class="container-metricas-temperaturas"> -->
+        <div class="container-metricas-temperaturas">
         <div id="alerta_temperatura_baixa">
           <span>Abaixo 15Cº</span>
         </div>
@@ -61,9 +65,9 @@
         <div id="alerta_temperatura_alta">
           <span>Acima de 25Cº</span>
         </div>
-        <!-- </div> -->
+        </div>
 
-        <!-- <div class="container-metricas-umidades"> -->
+        <div class="container-metricas-umidades">
         <div id="alerta_umidade_baixa">
           <span>Abaixo de 30%</span>
         </div>
@@ -73,29 +77,29 @@
         <div id="alerta_umidade_alta">
           <span>Acima de 60%</span>
         </div>
-        <!-- </div> -->
+        </div>
       </div>
 
-      <div class="container_temperatura container">
+      <div class="container_temperatura container bgColorTempQ126">
         <h3 class="titulo_container">Temperatura</h3>
-        <p class="paragrafo_container">25°C</p>
+        <p class="paragrafo_container">23°C 🌡️</p>
         <span id="status-message">Temperatura Normal</span>
       </div>
 
-      <div class="container_umidade container">
+      <div class="container_umidade container bgColorUmiQ126">
         <h3 class="titulo_container">Umidade</h3>
-        <p class="paragrafo_container">68%</p>
+        <p class="paragrafo_container">35% 💧</p>
         <span id="status-message">Umidade Normal</span>
       </div>
 
       <div class="container_proximidade container">
         <h3 class="titulo_container">Proximidade</h3>
-        <p class="paragrafo_container">Aberto</p>
+        <p class="paragrafo_container">Aberto 🪟</p>
         <span id="status-message">Janela Aberta</span>
       </div>
 
       <div class="container_alerta container">
-        <h3 class="titulo_container">Alerta</h3>
+        <h3 class="titulo_container">Alerta ⚠️</h3>
         <p class="paragrafo_container">Sem alertas</p>
         <span id="status-message">-</span>
       </div>
