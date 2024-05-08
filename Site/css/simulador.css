@@ -27,21 +27,22 @@ body {
 
 .button_back {
     position: relative;  
-    top: 10px;
-    left: 10px;
-    border: none;
-    background-color: var(--branco-neutro);
-    color: var(--azul-ceu);
-    font-size: 12pt;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    width: 300px;
 }
 
-.button_back img {
+.button_back a {
+   text-decoration: none;
+}
+
+.button_back a img {
     width: 60px;
     height: 60px;
     color: white;
+    position: relative;
+    top: 20px;
 }
 
 .button_back:hover {

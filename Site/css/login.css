@@ -163,7 +163,7 @@ input {
 
 #input_nome {
 
-    background-image: url("img/solar_user-outline.png");
+    background-image: url("../img/solar_user-outline.png");
     background-repeat: no-repeat;
     background-size: 1.5625rem;
     background-position: .625rem center;
@@ -173,7 +173,7 @@ input {
 
 #login_input_email {
 
-    background-image: url("img/iconamoon_email-thin.png");
+    background-image: url("../img/iconamoon_email-thin.png");
     background-repeat: no-repeat;
     background-size: 1.5625rem;
     background-position: .625rem center;
@@ -183,7 +183,7 @@ input {
 
 #login_input_senha{
 
-    background-image: url("img/Vector.png");
+    background-image: url("../img/Vector.png");
     background-repeat: no-repeat;
     background-size: 1.1875rem;
     background-position: .625rem center;
@@ -193,7 +193,7 @@ input {
 
 #cadastro_input_email {
 
-    background-image: url("img/iconamoon_email-thin.png");
+    background-image: url("../img/iconamoon_email-thin.png");
     background-repeat: no-repeat;
     background-size: 1.5625rem;
     background-position: .625rem center;
@@ -202,8 +202,7 @@ input {
 }
 
 #cadastro_input_senha{
-
-    background-image: url("img/Vector.png");
+    background-image: url("../img/Vector.png");
     background-repeat: no-repeat;
     background-size: 1.1875rem;
     background-position: .625rem center;
@@ -213,7 +212,7 @@ input {
 
 #confirmacaoSenha{
 
-    background-image: url("img/Vector.png");
+    background-image: url("../img/Vector.png");
     background-repeat: no-repeat;
     background-size: 1.1875rem;
     background-position: .625rem center;
