@@ -95,8 +95,9 @@ function cadastro() {
   /* ------------------------------ CONFIRMAÇÃO DE EMAIL ------------------------------- */
 
   if (
-    (email.indexOf("@") > 0 && email.indexOf(".com") > 0) ||
-    email.indexOf(".school") > 0
+    email.indexOf("@") > 0 &&
+    (email.indexOf(".com") > email.indexOf("@") ||
+      email.indexOf(".school") > email.indexOf("@"))
   ) {
     emailValido = true;
   }
