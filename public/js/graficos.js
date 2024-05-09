@@ -4,7 +4,7 @@ const umidade = document.getElementById("graficoUmidade");
 new Chart(temperatura, {
   type: "line",
   data: {
-    labels: ["12:00", "12:00", "12:00", "12:00", "12:00", "12:00"],
+    labels: ["5", "6", "7", "8", "9", "10"],
     datasets: [
       {
         label: "Temperatura",
@@ -27,7 +27,7 @@ new Chart(temperatura, {
 new Chart(umidade, {
   type: "line",
   data: {
-    labels: ["12:00", "12:00", "12:00", "12:00", "12:00", "12:00"],
+    labels: ["5", "6", "7", "8", "9", "10"],
     datasets: [
       {
         label: "Umidade",
