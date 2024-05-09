@@ -56,11 +56,11 @@ CREATE TABLE leitura (
 
 
 
-INSERT INTO hotel (nomeHotel, cnpj, emailHotel, senha)
+INSERT INTO hotel (nomeHotel, emailHotel, senha)
 VALUES 
-    ('Ibis São Paulo', '12.345.678/0001-90', 'ibissp@gmail.com','123@IbiS'),
-    ('Gran Villagio Hotel', '98.765.432/0001-21','granvillagio@gmail.com','GranV56!789'),
-    ('Hotel Plaza', '11.223.344/0001-55', 'hotelplaza@hotmail.com', '3456Plaz%0');
+    ('Ibis São Paulo','ibissp@gmail.com','123@IbiS'),
+    ('Gran Villagio Hotel','granvillagio@gmail.com','GranV56!789'),
+    ('Hotel Plaza', 'hotelplaza@hotmail.com', '3456Plaz%0');
 
 
 INSERT INTO funcionario (fk_gerente, nomeFuncionario, emailFuncionario, senha, fk_hotel)
