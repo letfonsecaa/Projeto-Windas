@@ -29,7 +29,7 @@ CREATE TABLE quarto (
     idQuarto INT NOT NULL AUTO_INCREMENT,
     numero INT NOT NULL,
     andar VARCHAR(10) NOT NULL,
-    ocupacao VARCHAR(30) CHECK (ocupacao IN('Indisponível','Disponível')),
+    ocupacao VARCHAR(30) CHECK (ocupacao IN('Ocupado','Desocupado')),
     fk_hotel INT NOT NULL,
     PRIMARY KEY (idQuarto),
     CONSTRAINT fk_quarto_hotel FOREIGN KEY (fk_hotel) REFERENCES hotel(idHotel)
@@ -77,9 +77,9 @@ VALUES (null,'Fernanda Menezes','fernandamenezes@gmail.com','1258#f&r', 1),
 
 INSERT INTO quarto (numero, andar, ocupacao, fk_hotel)
 VALUES 
-    (125, '6º andar', 'Disponível', 1),
-    (252, '10º andar', 'Indisponível', 2),
-    (354, '15º andar', 'Disponível', 3);
+    (125, '6º andar', 'Desocupado', 1),
+    (126, '6º andar', 'Ocupado', 2),
+    (127, '6º andar', 'Desocupado', 3);
 
 INSERT INTO sistema_sensor (tipo, fk_quarto)
 VALUES 
