@@ -29,7 +29,7 @@ CREATE TABLE quarto (
     idQuarto INT NOT NULL AUTO_INCREMENT,
     numero INT NOT NULL,
     andar VARCHAR(10) NOT NULL,
-    ocupacao VARCHAR(30) CHECK (ocupacao IN('Indisponível','Disponível')),
+    ocupacao VARCHAR(30) CHECK (ocupacao IN('Ocupado','Desocupado')),
     fk_hotel INT NOT NULL,
     PRIMARY KEY (idQuarto),
     CONSTRAINT fk_quarto_hotel FOREIGN KEY (fk_hotel) REFERENCES hotel(idHotel)
@@ -56,11 +56,11 @@ CREATE TABLE leitura (
 
 
 
-INSERT INTO hotel (nomeHotel, cnpj, emailHotel, senha)
+INSERT INTO hotel (nomeHotel,emailHotel, senha)
 VALUES 
-    ('Ibis São Paulo', '12.345.678/0001-90', 'ibissp@gmail.com','123@IbiS'),
-    ('Gran Villagio Hotel', '98.765.432/0001-21','granvillagio@gmail.com','GranV56!789'),
-    ('Hotel Plaza', '11.223.344/0001-55', 'hotelplaza@hotmail.com', '3456Plaz%0');
+    ('Ibis São Paulo', 'ibissp@gmail.com','123@IbiS'),
+    ('Gran Villagio Hotel','granvillagio@gmail.com','GranV56!789'),
+    ('Hotel Plaza', 'hotelplaza@hotmail.com', '3456Plaz%0');
 
 
 INSERT INTO funcionario (fk_gerente, nomeFuncionario, emailFuncionario, senha, fk_hotel)
@@ -77,9 +77,9 @@ VALUES (null,'Fernanda Menezes','fernandamenezes@gmail.com','1258#f&r', 1),
 
 INSERT INTO quarto (numero, andar, ocupacao, fk_hotel)
 VALUES 
-    (125, '6º andar', 'Disponível', 1),
-    (252, '10º andar', 'Indisponível', 2),
-    (354, '15º andar', 'Disponível', 3);
+    (125, '6º andar', 'Desocupado', 1),
+    (126, '6º andar', 'Ocupado', 2),
+    (127, '6º andar', 'Desocupado', 3);
 
 INSERT INTO sistema_sensor (tipo, fk_quarto)
 VALUES 
@@ -87,14 +87,6 @@ VALUES
      ('DHT11 e TCRT5000', 2),
    ('DHT11 e TCRT5000', 3);
    
-   
-
-
-/*INSERT INTO leitura ( dht11_temperatura, dht11_umidade, proximidade, dataHora, fk_sistema_sensor)
-VALUES */
-
-
-
 SELECT * FROM hotel;
 
 SELECT * FROM funcionario;
