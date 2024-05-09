@@ -26,7 +26,7 @@
         </ul>
         <ul>
           <li>
-            <img src="../img/cama.svg" /><a href="#" style="color: #001d6c"
+            <img src="../img/cama.svg" /><a href="#" style="color: #001d6c; font-weight: bold;"
               >Quarto N° 126 </a>
           </li>
         </ul>
@@ -83,7 +83,7 @@
 
       <div class="container_temperatura container bgColorTempQ126">
         <h3 class="titulo_container">Temperatura</h3>
-        <p class="paragrafo_container">23°C 🌡️</p>
+        <p class="paragrafo_container">25°C 🌡️</p>
         <span id="status-message">Temperatura Normal</span>
       </div>
 
@@ -124,7 +124,7 @@
   new Chart(temperatura, {
     type: "line",
     data: {
-      labels: ["12:00", "13:00", "14:00", "15:00", "16:00", "17:00"],
+      labels: ["12:00", "12:00", "12:00", "12:00", "12:00", "12:00"],
       datasets: [
         {
           label: "Temperatura",
@@ -145,11 +145,11 @@
   new Chart(umidade, {
     type: "line",
     data: {
-      labels: ["12:00", "13:00", "14:00", "15:00", "16:00", "17:00"],
+      labels: ["12:00", "12:00", "12:00", "12:00", "12:00", "12:00"],
       datasets: [
         {
           label: "Umidade",
-          data: [60, 70, 75, 63, 70, 68],
+          data: [30, 31, 32, 33, 32, 35],
           borderWidth: 3,
           borderColor: "#36a2eb",
           backgroundColor: "#36a2eb",
