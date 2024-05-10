@@ -47,7 +47,7 @@ CREATE TABLE leitura (
   idLeitura INT NOT NULL AUTO_INCREMENT,
   dht11_temperatura DECIMAL(4,2) NOT NULL,
   dht11_umidade DECIMAL(4,2) NOT NULL,
-  proximidade CHAR(1) NOT NULL,
+  proximidade INT NOT NULL,
   dataHora timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL,
   fk_sistema_sensor INT NOT NULL,
   PRIMARY KEY (idLeitura),
